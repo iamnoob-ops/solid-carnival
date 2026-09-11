@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Step-by-Step Drawing Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Drawing Studio</h1>
+  </header>
+
+  <main class="container">
+    <!-- Left Panel: Reference & Steps -->
+    <section class="reference-card">
+      <h2>Reference Guide</h2>
+      <img id="guide-image" src="https://via.placeholder.com/400x300?text=Step+1:+Draw+a+Circle" alt="Drawing Guide Step" />
+      <p id="step-description"><strong>Step 1:</strong> Start by drawing a light circle for the base of the drawing.</p>
+      
+      <div class="step-controls">
+        <button id="prev-step" disabled>Previous Step</button>
+        <span id="step-indicator">Step 1 of 3</span>
+        <button id="next-step">Next Step</button>
+      </div>
+    </section>
+
+    <!-- Right Panel: Canvas & Drawing Tools -->
+    <section class="canvas-card">
+      <div class="toolbar">
+        <label for="color-picker">Color:</label>
+        <input type="color" id="color-picker" value="#000000" />
+
+        <label for="brush-size">Size:</label>
+        <input type="range" id="brush-size" min="1" max="50" value="5" />
+
+        <button id="undo-btn">Undo</button>
+        <button id="clear-btn">Clear</button>
+        <button id="download-btn">Save</button>
+      </div>
+
+      <div class="canvas-wrapper">
+        <canvas id="drawing-canvas"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
